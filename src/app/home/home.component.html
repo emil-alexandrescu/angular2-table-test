@@ -1,0 +1,7 @@
+<div>
+  <p>
+    Search: <input [(ngModel)]="filter" (ngModelChange)="search()" />
+  </p>
+
+  <my-table [rows]="customers | async" [columns]="columns" (sort)="sort($event)"></my-table>
+</div>

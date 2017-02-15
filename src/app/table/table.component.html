@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns; let i = index">
+        <a href="#" (click)="sortColumn(i)">
+          <b>{{column.title}}</b>
+          <span *ngIf="column.sort">({{column.sort}})</span>
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let column of columns">{{row[column.id]}}</td>
+    </tr>
+  </tbody>
+</table>
